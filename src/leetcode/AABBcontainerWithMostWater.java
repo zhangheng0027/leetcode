@@ -7,7 +7,7 @@ package leetcode;
  * @author ZhangHeng
  *
  */
-public class AAAKcontainerWithMostWater {
+public class AABBcontainerWithMostWater {
 
 	public int maxArea(int[] height) {
         
@@ -27,7 +27,7 @@ public class AAAKcontainerWithMostWater {
 	
 	public static void main(String[] args) {
 		int[] arr = {1,8,6,2,5,4,8,3,7};
-		AAAKcontainerWithMostWater a = new AAAKcontainerWithMostWater();
+		AABBcontainerWithMostWater a = new AABBcontainerWithMostWater();
 		System.out.println(a.maxArea(arr));
 		
 	}
