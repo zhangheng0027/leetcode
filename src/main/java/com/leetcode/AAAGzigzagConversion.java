@@ -1,9 +1,10 @@
-package leetcode;import java.awt.datatransfer.StringSelection;
+package com.leetcode;
+
 
 
 /**
  * https://leetcode-cn.com/problems/zigzag-conversion/description/
- * @author zhangheng
+ * @author ZhangHeng
  *
  */
 public class AAAGzigzagConversion {

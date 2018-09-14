@@ -1,10 +1,10 @@
-package leetcode;
+package com.leetcode;
 
 
 /**
  * 
  * https://leetcode-cn.com/problems/reverse-integer/description/
- * @author zhangheng
+ * @author ZhangHeng
  *
  */
 public class AAAHreverseInteger {
