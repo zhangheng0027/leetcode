@@ -4,7 +4,7 @@ package com.leetcode;
  * 
  * https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/description/
  * @author zhangH
- *
+ * 
  */
 public class AAADlongestSubstringWithoutRepeatingCharacters {
 	
