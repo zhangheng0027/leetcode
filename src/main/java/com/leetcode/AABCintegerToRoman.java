@@ -12,8 +12,6 @@ public class AABCintegerToRoman {
 	private final static int[]    radix = { 0,  0,  1,   5,   10,  50, 100, 500, 1000};
 	
 	public String intToRoman(int num) {
-		String[] roman = {"", "", "I", "V", "X", "L", "C", "D", "M"};
-		int[]    radix = { 0,  0,  1,   5,   10,  50, 100, 500, 1000};
 		StringBuffer sb = new StringBuffer();
 		for (int i = radix.length - 1; i >= 2 && num > 0; i--) {
 			if (num + radix[(i - 2) + i % 2] >= radix[i]) {
