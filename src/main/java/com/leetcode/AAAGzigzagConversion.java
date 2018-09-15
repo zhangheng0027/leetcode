@@ -5,7 +5,7 @@ package com.leetcode;
 /**
  * https://leetcode-cn.com/problems/zigzag-conversion/description/
  * @author ZhangHeng
- *
+ * 
  */
 public class AAAGzigzagConversion {
 	
