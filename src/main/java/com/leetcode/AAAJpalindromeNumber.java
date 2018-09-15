@@ -4,7 +4,7 @@ package com.leetcode;
  * 
  * https://leetcode-cn.com/problems/palindrome-number/description/
  * @author ZhangHeng
- *
+ * 
  */
 public class AAAJpalindromeNumber {
 	public boolean isPalindrome(int x) {
