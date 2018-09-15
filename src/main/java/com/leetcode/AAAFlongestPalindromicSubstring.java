@@ -4,7 +4,7 @@ package com.leetcode;
 /**
  * https://leetcode-cn.com/problems/longest-palindromic-substring/description/
  * @author zhangheng
- *
+ * 
  */
 public class AAAFlongestPalindromicSubstring {
 	
@@ -24,8 +24,8 @@ public class AAAFlongestPalindromicSubstring {
 		String str = chuli(s);
 		final int len = str.length();
 		
-		int core = 0;  // 记录中心位置
-		int left = 0; //记录最右边的位置
+		int core = 0;  // 璁板綍涓績浣嶇疆
+		int left = 0; //璁板綍鏈�鍙宠竟鐨勪綅缃�
 		
 		int max = 0;
 		int maxIndex = 0;
@@ -34,7 +34,7 @@ public class AAAFlongestPalindromicSubstring {
 		for (int i = 0; i < len; i++) {
 			
 			if (i <= left) {
-				A[i] = A[2 * core - left + 1]; // 将对称位置的值给A[i]
+				A[i] = A[2 * core - left + 1]; // 灏嗗绉颁綅缃殑鍊肩粰A[i]
 			} else {
 				A[i] = 0;
 			}
