@@ -21,9 +21,6 @@ public class AAACaddTwoNumbers {
 			l1 = l1 == null ? null : l1.next;
 			l2 = l2 == null ? null : l2.next;
 		}
-		if (l1 != null) {
-			temp = l1;
-		} else temp = l2;
 		return result.next;
     }
 }
