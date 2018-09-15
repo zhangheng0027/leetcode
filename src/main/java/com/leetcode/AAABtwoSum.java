@@ -5,8 +5,8 @@ import java.util.Map;
 
 /**
  * https://leetcode-cn.com/problems/two-sum/description/
- * @author zhangH
- *
+ * @author zhangHeng
+ * 
  */
 public class AAABtwoSum {
 	public int[] twoSum(int[] nums, int target) {
