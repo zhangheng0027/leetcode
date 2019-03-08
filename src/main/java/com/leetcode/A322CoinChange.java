@@ -38,7 +38,7 @@ public class A322CoinChange {
         int max = Math.min(coins[coins.length - 1], amount);
         int[] args = initArgs(max, -1);
         for (int i = coins[0]; i <= amount; i++) {
-            int min = -1;
+            int min = Integer.MAX_VALUE;
             for (int j : coins) {
                 if (i == j) {
                     min = 1;
@@ -49,9 +49,11 @@ public class A322CoinChange {
                 int temp = args[(i - j) % max];
                 if (temp == -1)
                     continue;
-                if (temp + 1 < min || (min == -1 && temp > 0))
+                if (temp + 1 < min)
                     min = temp + 1;
             }
+            if (min == Integer.MAX_VALUE)
+                min = -1;
             args[i % max] = min;
         }
         return args[amount % max];
