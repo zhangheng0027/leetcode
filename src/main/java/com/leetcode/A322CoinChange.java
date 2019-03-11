@@ -25,10 +25,16 @@ import java.util.Arrays;
 public class A322CoinChange {
 
     public static void main(String[] args) {
-        int [] a = {1,2147483647};
-        System.out.println(coinChange(a, 2));
+        int [] a = {186,419,83,408};
+        System.out.println(coinChange1(a, 6249));
     }
 
+    /**
+     * 节省一部分空间
+     * @param coins
+     * @param amount
+     * @return
+     */
     public static int coinChange(int[] coins, int amount) {
         if (amount == 0)
             return 0;
@@ -64,6 +70,34 @@ public class A322CoinChange {
         for (int i = 0; i < len; i++)
             args[i] = num;
         return args;
+    }
+
+    /**
+     *
+     * @param coins
+     * @param amount
+     * @return
+     */
+    public static int coinChange1(int[] coins, int amount) {
+        int[] args = new int[amount + 1];
+        args[0] = 0;
+        Arrays.sort(coins);
+        for (int i = 1; i <= amount; i++) {
+            int min = -1;
+            for (int j : coins) {
+                if (i == j) {
+                    min = 1;
+                    break;
+                }
+                if (i < j)
+                    break;
+                int temp = args[i - j] + 1;
+                if (temp > 1 && (min == -1 || min > temp))
+                    min = temp;
+            }
+            args[i] = min;
+        }
+        return args[amount];
     }
 
 }

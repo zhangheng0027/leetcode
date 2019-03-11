@@ -47,7 +47,7 @@ public class A120MinimumTotal {
         t4.add(8);
         t4.add(3);
         l.add(t4);
-        System.out.println(minimumTotal(l));
+        System.out.println(minimumTotal1(l));
 
     }
 
@@ -69,11 +69,29 @@ public class A120MinimumTotal {
             temp.add(triangle.get(i).get(i) + result.get(i - 1).get(i - 1));
             result.add(temp);
         }
-        int min = 0x79999999;
+        int min = 0x7fffffff;
         for (Integer i : result.get(len - 1)) {
             if (i < min)
                 min = i;
         }
+        return min;
+    }
+
+    public static int minimumTotal1(List<List<Integer>> triangle) {
+        final int len = triangle.size();
+        int[] args = new int[len + 1]; // 实际只用到 len 长度，不想每次减1
+        args[0] = 0x7fffffff;
+        args[len] = triangle.get(0).get(0);
+        for (int i = 1; i < len; i++) {
+            args[len - i] = triangle.get(i).get(0) + args[len - i + 1];
+            for (int j = 1; j < i; j++)
+                args[len - i + j] = Math.min(args[len - i + j], args[len - i + j + 1]) + triangle.get(i).get(j);
+            args[len] += triangle.get(i).get(i);
+        }
+        int min = 0x7fffffff;
+        for (int i : args)
+            if (min > i)
+                min = i;
         return min;
     }
 }
