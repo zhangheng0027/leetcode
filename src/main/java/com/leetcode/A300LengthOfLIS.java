@@ -18,7 +18,7 @@ public class A300LengthOfLIS {
         int[] args = new int[len];
         args[0] = 1;
         for (int i = 1; i < len; i++) {
-            int max = 0;
+            int max = 1;
             for (int j = 0; j < i; j++) {
                 if (nums[i] > nums[j] && max < args[j])
                     max = args[j];
